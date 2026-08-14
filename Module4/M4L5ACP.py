@@ -1,58 +1,47 @@
-# M4L5ACP: Random Fun Calculator
-# After Class Project: Random & Math Modules
+# M4L5ACP: Library Book Availability Checker
+# After Class Project: Advanced Python Functions - List/Dict Comprehension, map(), zip(), exit()
 
-# PART 1: Import random and math modules
-import random
-import math
+# PART 1: Create the library's book names and available copy counts
+books = ["matilda", "harry potter", "wonder", "the jungle book", "charlie"]
+copy_counts = [4, 0, 6, 3, 2]
 
-print("===== RANDOM FUN CALCULATOR =====")
+# PART 2: Pair books with copy counts into a dictionary using zip() and dict comprehension
+library = {book: count for book, count in zip(books, copy_counts)}
+print("Full Library Stock:", library)
 
-# PART 2: Generate a random lucky number using randint()
-lucky_number = random.randint(1, 10)
-print("Your lucky number is:", lucky_number)
+# PART 3: Filter only the books that are available using list comprehension
+available_books = [book for book in books if library[book] > 0]
+print("Books Available:", available_books)
 
-# PART 3: Turn a random number into a random choice
-fun_choices = ["Play a game", "Solve a puzzle", "Read a story", "Draw something"]
-random_activity = random.choice(fun_choices)
-print("Random activity for today:", random_activity)
+# PART 4: Ask the reader which book they want to borrow
+chosen_book = input("Which book do you want to borrow? ").strip().lower()
 
-# PART 4: Number guessing game
-print("\nGuess the secret number from 1 to 5!")
-secret_number = random.randint(1, 5)
+# PART 5: Stop the checker early if the chosen book is not available using exit()
+if chosen_book not in library or library[chosen_book] == 0:
+    print(chosen_book, "is not available! Stopping the checker.")
+    exit()
 
-while True:
-    guess = int(input("Enter your guess: "))
+# PART 6: Create late fees and ask for an extra fee amount
+late_fees = [5, 8, 4, 6, 7]
+extra_fee = int(input("Enter the extra library fee to add to every book: "))
 
-    if guess == secret_number:
-        print("Correct! You guessed the number.")
-        break
-    else:
-        print("Wrong guess. Try again!")
+# PART 7: Apply the extra fee to every late fee using map()
+updated_fees = list(map(lambda fee: fee + extra_fee, late_fees))
+print("Updated Late Fees:", updated_fees)
 
-# PART 5: Use math module functions
-decimal_number = float(input("\nEnter a decimal number: "))
+# PART 8: Find the updated fee of the chosen book
+book_index = books.index(chosen_book)
+chosen_fee = updated_fees[book_index]
+print("Late fee for", chosen_book, "after update:", chosen_fee)
 
-print("Ceiling value:", math.ceil(decimal_number))
-print("Floor value:", math.floor(decimal_number))
+# PART 9: Reduce the copy count after borrowing
+library[chosen_book] = library[chosen_book] - 1
+print(chosen_book, "borrowed! Remaining copies:", library[chosen_book])
 
-# PART 6: Use copysign()
-x = 10
-y = -5
-print("Copy sign result:", math.copysign(x, y))
-
-# PART 7: Use fabs()
-negative_number = int(input("Enter a negative number: "))
-print("Absolute value:", math.fabs(negative_number))
-
-# PART 8: Use gcd()
-num1 = int(input("Enter first number for GCD: "))
-num2 = int(input("Enter second number for GCD: "))
-
-print("GCD is:", math.gcd(num1, num2))
-
-# PART 9: Print final summary
-print("\n===== FUN CALCULATOR SUMMARY =====")
-print("Lucky Number:", lucky_number)
-print("Random Activity:", random_activity)
-print("Secret Number:", secret_number)
-print("==================================")
+# PART 10: Print the final library summary
+print("")
+print("===== LIBRARY BOOK AVAILABILITY CHECKER =====")
+print("Book Borrowed:", chosen_book)
+print("Late Fee:", chosen_fee)
+print("Updated Library Stock:", library)
+print("=============================================")

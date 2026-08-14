@@ -1,36 +1,16 @@
-# M4L5A2: Rock Paper Scissors
-# Activity 2: Random Module - Selecting choices with random.choice()
+# M4L5A2: List & Dict Comprehensions
+# Activity 2: List Comprehension and Dictionary Comprehension Examples
 
-import random  # Importing random module
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-while True:  # Iterate loop
-    user_action = input("Enter a choice (rock, paper, scissors): ").strip().lower()
-    possible_actions = ["rock", "paper", "scissors"]
+# List Comprehension: Filter even numbers
+even_numbers = [num for num in numbers if num % 2 == 0]
+print("Even numbers (List Comprehension):", even_numbers)
 
-    # Using random function
-    computer_action = random.choice(possible_actions)
-    print(f"\nYou chose {user_action}, computer chose {computer_action}.\n")
+# List Comprehension: Square numbers
+squared_numbers = [num**2 for num in numbers]
+print("Squared numbers:", squared_numbers)
 
-    # Conditions to check who won the game
-    if user_action == computer_action:
-        print(f"Both players selected {user_action}. It's a tie!")
-    elif user_action == "rock":
-        if computer_action == "scissors":
-            print("Rock smashes scissors! You win!")
-        else:
-            print("Paper covers rock! You lose.")
-    elif user_action == "paper":
-        if computer_action == "rock":
-            print("Paper covers rock! You win!")
-        else:
-            print("Scissors cuts paper! You lose.")
-    elif user_action == "scissors":
-        if computer_action == "paper":
-            print("Scissors cuts paper! You win!")
-        else:
-            print("Rock smashes scissors! You lose.")
-
-    # Take input for playing again
-    play_again = input("Play again? (y/n): ").strip().lower()
-    if play_again != "y":
-        break
+# Dictionary Comprehension: Number -> Square mapping
+square_dict = {num: num**2 for num in numbers if num <= 5}
+print("Number-Square Dictionary:", square_dict)

@@ -1,17 +1,13 @@
-# M4L5A3: Mathematical Operations
-# Activity 3: Math Module - ceil, floor, copysign, fabs, and gcd
+# M4L5A3: map() and zip() Functions
+# Activity 3: Demonstrating map() with lambda and zip() pairing
 
-import math  # Importing math module
+names = ["Alice", "Bob", "Charlie"]
+scores = [85, 92, 78]
 
-# Using ceil and floor functions of math module
-print('The Floor and Ceiling value of 23.56 are: ' + str(math.ceil(23.56)) + ', ' + str(math.floor(23.56)))
+# Using zip() to pair two lists together
+paired_student_scores = list(zip(names, scores))
+print("Paired Student Scores (zip):", paired_student_scores)
 
-x = 10
-y = -15
-# Using copysign function
-print('The value of x after copying the sign from y is: ' + str(math.copysign(x, y)))
-
-# Using fabs and gcd functions
-print('Absolute value of -96 and 56 are: ' + str(math.fabs(-96)) + ', ' + str(math.fabs(56)))
-
-print('The GCD of 24 and 56 : ' + str(math.gcd(24, 56)))
+# Using map() to convert scores to percentage strings
+percentage_scores = list(map(lambda score: f"{score}%", scores))
+print("Formatted Scores (map):", percentage_scores)
