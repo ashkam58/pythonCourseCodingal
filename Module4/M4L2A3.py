@@ -1,22 +1,19 @@
-# M4L2A3: Factorial
-# Activity 3: Recursion, Base Case, Recursive Case, and Docstring
+# M4L2A3: Weather Prediction
+# Activity 3: Counting Sunny vs Rainy Days in a Weather Tuple
 
-def factorial(x):
-    '''this is a recursive function to find the factorial of an integer'''
-    if x == 0 or x == 1:
-        return 1
+weather = (1, 0, 0, 0, 1, 1, 0)
+sunny = 0
+rainy = 0
+
+for i in range(0, 7):
+    if weather[i] == 0:
+        rainy += 1
     else:
-        # Calling function inside itself (Recursion)
-        return x * factorial(x - 1)
+        sunny += 1
 
-# Display docstring using __doc__
-print("Docstring Explanation:")
-print(factorial.__doc__)
-print()
+print(f"Sunny days: {sunny}, Rainy days: {rainy}")
 
-# Display factorial results
-print("The factorial of 0:", factorial(0))
-print("The factorial of 1:", factorial(1))
-print("The factorial of 2:", factorial(2))
-print("The factorial of 5:", factorial(5))
-print("The factorial of 10:", factorial(10))
+if sunny > rainy:
+    print("Good weather")
+else:
+    print("Bad weather")

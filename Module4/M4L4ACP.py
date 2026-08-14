@@ -1,45 +1,34 @@
-# M4L4ACP: Shopping Discount Calculator
-# After Class Project: Exception Handling - try/except, multiple exceptions, else, finally, retry loop
+# M4L4ACP: Basket Fruit Selector & Array Master
+# After Class Project: Sets and Arrays
 
-valid = False
+import array as arr
 
-while not valid:
-    try:
-        # PART 1: Take bill amount, discount percent, and number of people
-        bill_amount, discount_percent, people = input(
-            "Enter bill amount, discount percent, and people separated by commas: "
-        ).split(",")
+print("===== SETS AND ARRAYS MASTER =====")
 
-        bill_amount = float(bill_amount)
-        discount_percent = float(discount_percent)
-        people = int(people)
+# PART 1: Set Operations
+set_a = {1, 2, 3, 4, 5}
+set_b = {4, 5, 6, 7, 8}
 
-        # PART 2: Check for invalid values
-        if bill_amount <= 0 or discount_percent < 0 or people < 0:
-            raise ValueError
+print("\n--- Set Operations ---")
+print("Set A:", set_a)
+print("Set B:", set_b)
 
-        # PART 3: Calculate discount
-        discount_amount = bill_amount * discount_percent / 100
-        final_amount = bill_amount - discount_amount
+print("Intersection (Common elements):", set_a & set_b)
+print("Union (All unique elements):", set_a | set_b)
+print("Difference (Set A - Set B):", set_a - set_b)
+print("Symmetric Difference:", set_a ^ set_b)
 
-        # PART 4: Divide bill between people
-        amount_per_person = final_amount / people
+# PART 2: Array Operations
+print("\n--- Array Operations ---")
+arr_num = arr.array('i', [5, 12, 8, 12, 25, 30])
+print("Original Array:", list(arr_num))
 
-    except ValueError:
-        print("Invalid input! Enter values like this: 1000, 10, 2")
+arr_num.append(40)
+print("After appending 40:", list(arr_num))
 
-    except ZeroDivisionError:
-        print("People cannot be 0. Please enter at least 1 person.")
+arr_num.reverse()
+print("Reversed Array:", list(arr_num))
 
-    else:
-        print("\n===== SHOPPING DISCOUNT SUMMARY =====")
-        print("Original Bill:", bill_amount)
-        print("Discount Percent:", discount_percent)
-        print("Discount Amount:", discount_amount)
-        print("Final Amount:", final_amount)
-        print("Amount Per Person:", round(amount_per_person, 2))
-        print("=====================================")
-        valid = True
+print("Count of 12:", arr_num.count(12))
 
-    finally:
-        print("Discount check completed for this attempt.\n")
+print("\n===== SUMMARY COMPLETE =====")

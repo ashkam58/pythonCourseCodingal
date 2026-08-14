@@ -1,17 +1,19 @@
-# M4L2A2: Cube of the Cube
-# Activity 2: Function Chaining - Calling one function from inside another
+# M4L2A2: Flip Flop
+# Activity 2: Checking if a Tuple is a Palindrome (Flip-Flop)
 
-# Define function to calculate cube
-def cube(number):
-    return number * number * number
+def palind(r):
+    e = len(r) - 1
+    s = 0
+    while s < e:
+        if r[s] != r[e]:
+            return False
+        s += 1
+        e -= 1
+    return True
 
-# Define function to execute cube only if number is divisible by 3
-def by_three(number):
-    if number % 3 == 0:
-        return cube(number)
-    else:
-        return False
+r = (1, 2, 3, 3, 2, 1)
 
-# Display results
-print("by_three(9):", by_three(9))
-print("by_three(4):", by_three(4))
+if palind(r):
+    print("The Tuple is Flip-Flop")
+else:
+    print("The Tuple is not Flip-Flop")

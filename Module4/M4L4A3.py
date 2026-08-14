@@ -1,15 +1,17 @@
-# M4L4A3: Bye Bye
-# Activity 3: Exception Handling - Retry Loop and Nested While Loop
+# M4L4A3: Array Operations
+# Activity 3: Arrays - Using array module to create, append, reverse, and count elements
 
-valid = False
-while not valid:  # Using nested while loop and retry logic
-    try:
-        n = int(input("Enter a number: "))
-        # If an even number is entered, run loop printing bye
-        while n % 2 == 0:
-            print("bye")
-            n = int(input("Enter an odd number to stop: "))
-        valid = True
-        print(f"Thank you! You entered odd number: {n}")
-    except ValueError:
-        print("Invalid")
+import array as arr
+
+# Create integer array
+numbers = arr.array('i', [10, 20, 30, 40, 20, 50])
+print("Original Array:", numbers)
+
+# Append and count
+numbers.append(60)
+print("After appending 60:", numbers)
+print("Count of 20 in array:", numbers.count(20))
+
+# Reverse array
+numbers.reverse()
+print("Reversed Array:", numbers)

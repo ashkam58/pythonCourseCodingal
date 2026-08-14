@@ -1,35 +1,48 @@
-# M4L2ACP: Bill & Seating Helper
-# After Class Project: Positional Arguments, Recursion, Docstring, and __doc__
+# M4L2ACP: Weekly Habit Tracker
+# After Class Project: Tuples - Creation, Immutability, Indexing, Slicing, and Counting
 
-# PART 1: Define a function using positional arguments
-def total_bill(bill_amount, tip_perc):
-    # Calculate final bill after adding tip
-    total = bill_amount * (1 + 0.01 * tip_perc)
-    total = round(total, 2)
-    print(f"Please pay ${total}")
-    return total
+habit_info = ("Reading", True, 7, 20.5)
+print("Habit Info:", habit_info)
 
-# PART 2: Call the function with positional arguments
-total_bill(150, 20)
+weekly_habits = (1, 0, 1, 1, 0, 1, 1)
+print("Weekly Habits:", weekly_habits)
 
-# PART 3: Define a recursive function with a docstring
-def seating_arrangements(guests):
-    '''This is a recursive function to find the number of seating arrangements for guests.'''
+print("Total days tracked:", len(weekly_habits))
+print("Day 1 status:", weekly_habits[0])
+print("Day 4 status:", weekly_habits[3])
 
-    # Base case
-    if guests == 0 or guests == 1:
-        return 1
+first_three_days = weekly_habits[0:3]
+print("First three days:", first_three_days)
 
-    # Recursive case
+weekend_days = weekly_habits[5:7]
+print("Weekend days:", weekend_days)
+
+weekly_habits = weekly_habits + (1,)
+print("After adding one more day:", weekly_habits)
+
+completed = weekly_habits.count(1)
+missed = weekly_habits.count(0)
+
+print("Completed days:", completed)
+print("Missed days:", missed)
+
+done = 0
+not_done = 0
+
+for i in range(0, len(weekly_habits)):
+    if weekly_habits[i] == 1:
+        done += 1
     else:
-        return guests * seating_arrangements(guests - 1)
+        not_done += 1
 
-# PART 4: Access and print the docstring
-print()
-print(seating_arrangements.__doc__)
+if done > not_done:
+    print("Great habit progress!")
+else:
+    print("Try to be more consistent!")
 
-# PART 5: Display seating arrangement results
-print("Seating arrangements for 1 guest:", seating_arrangements(1))
-print("Seating arrangements for 2 guests:", seating_arrangements(2))
-print("Seating arrangements for 3 guests:", seating_arrangements(3))
-print("Seating arrangements for 5 guests:", seating_arrangements(5))
+print("\n===== WEEKLY HABIT TRACKER =====")
+print("Habit Name:", habit_info[0])
+print("Weekly Record:", weekly_habits)
+print("Completed:", done)
+print("Missed:", not_done)
+print("================================")

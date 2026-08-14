@@ -1,23 +1,17 @@
-# M4L4A2: Multiple Exceptions
-# Activity 2: Exception Handling - Handling Multiple Exception Types, else, and finally
+# M4L4A2: Set Intersection & Difference
+# Activity 2: Sets - Finding shared fruits between two baskets
 
-try:
-    num1, num2 = eval(input("Enter two numbers, separated by a comma : "))
-    result = num1 / num2
-    print("Result is", result)
+basket1 = {"apple", "banana", "cherry", "orange"}
+basket2 = {"banana", "kiwi", "apple", "mango"}
 
-# Using multiple except blocks for different types of errors
-except ZeroDivisionError:
-    print("Division by zero is error !!")
+print("Basket 1:", basket1)
+print("Basket 2:", basket2)
 
-except SyntaxError:
-    print("Comma is missing. Enter numbers separated by comma like this 1, 2")
+shared_fruits = basket1.intersection(basket2)
+print("Shared Fruits (Intersection):", shared_fruits)
 
-except:
-    print("Wrong input")
+all_fruits = basket1.union(basket2)
+print("All Unique Fruits (Union):", all_fruits)
 
-else:
-    print("No exceptions")
-
-finally:
-    print("This will execute no matter what")
+only_in_b1 = basket1.difference(basket2)
+print("Fruits only in Basket 1:", only_in_b1)

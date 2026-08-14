@@ -1,59 +1,59 @@
-# M4L1ACP: Art Supplies Billing Tool
-# After Class Project: Functions, Arguments, Return Statements & Receipt
+# M4L1ACP: Student Marks List Analyzer
+# After Class Project: Lists - Indexing, Slicing, Iteration, Matching, Sum & Average
 
-# PART 1: Define a function with no arguments to greet the customer
-def greet_customer():
-    print("Welcome to the Art Supplies Store!")
-    print("Get your colours, brushes, and paper here.")
+empty_list = []
+print("Empty List:", empty_list)
 
-# PART 2: Call the greet_customer function
-greet_customer()
+marks = [85, 72, 90, 66, 78]
+print("Student Marks:", marks)
 
-# PART 3: Ask for the price per item and the number of items bought
-price_per_item = float(input("Enter the price per art item in dollars: "))
-items_bought = int(input("Enter the number of art items bought: "))
+sample_marks = [10, 20, 30] * 2
+print("Repeated Sample Marks:", sample_marks)
 
-# PART 4: Define a function that takes arguments and returns the total cost
-def calculate_total(price, items):
-    total = price * items
-    return total
+print("Number of marks:", len(marks))
+print("First mark:", marks[0])
+print("Last mark:", marks[-1])
 
-# PART 5: Call calculate_total and store the value it returns
-total_cost = calculate_total(price_per_item, items_bought)
+first_three_marks = marks[0:3]
+print("First three marks:", first_three_marks)
 
-# PART 6: Use a built-in function to round the total, then print it
-rounded_total = round(total_cost, 2)
-print("Total Cost:", rounded_total)
+reversed_marks = marks[::-1]
+print("Reversed Marks:", reversed_marks)
 
-# PART 7: Ask how much money the customer paid
-amount_paid = float(input("Enter the amount paid by the customer: "))
+def match_marks(mark_list):
+    count = 0
+    matched_marks = []
 
-# PART 8: Define a function that takes arguments and returns the change due
-def calculate_change(paid, total):
-    change = paid - total
-    return change
+    for mark in mark_list:
+        mark_text = str(mark)
+        if len(mark_text) > 1 and mark_text[0] == mark_text[-1]:
+            count += 1
+            matched_marks.append(mark)
 
-# PART 9: Call calculate_change and store the value it returns
-change_due = calculate_change(amount_paid, rounded_total)
-rounded_change = round(change_due, 2)
+    print("Marks with first and last digit same:", matched_marks)
+    return count
 
-# PART 10: Define a function that returns a thank you message based on items bought
-def thank_you_message(items):
-    if items >= 5:
-        return "Great choice! You picked many art supplies for your project."
-    else:
-        return "Thanks for shopping at the art supplies store!"
+same_digit_count = match_marks([88, 72, 99, 65, 77])
+print("Number of matching marks:", same_digit_count)
 
-# PART 11: Call thank_you_message and store the value it returns
-closing_message = thank_you_message(items_bought)
+total = 0
+for mark in marks:
+    total += mark
 
-# PART 12: Print the final art supplies receipt
-print("")
-print("===== ART SUPPLIES BILL =====")
-print("Price Per Item:", price_per_item)
-print("Items Bought:", items_bought)
-print("Total Cost:", rounded_total)
-print("Amount Paid:", amount_paid)
-print("Change Due:", rounded_change)
-print(closing_message)
-print("=============================")
+average = total / len(marks)
+
+print("Sum of marks:", total)
+print("Average marks:", average)
+
+marks.sort()
+
+print("Smallest mark is:", marks[0])
+print("Largest mark is:", marks[-1])
+
+print("\n===== STUDENT MARKS LIST ANALYZER =====")
+print("Sorted Marks:", marks)
+print("Total Marks:", total)
+print("Average Marks:", average)
+print("Lowest Mark:", marks[0])
+print("Highest Mark:", marks[-1])
+print("=======================================")

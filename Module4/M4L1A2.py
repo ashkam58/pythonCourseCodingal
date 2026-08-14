@@ -1,26 +1,16 @@
-# M4L1A2: Built-in & User-Defined Functions
-# Activity 2: Exploring Built-in vs User-Defined Functions and Passing Arguments
+# M4L1A2: Word Matching
+# Activity 2: Counting words where length >= 2 and first & last characters match
 
-# Built-in Functions Examples
-num_list = [12.456, 45.891, 3.14159]
-print("Built-in len():", len(num_list))
-print("Built-in round():", round(num_list[0], 2))
+def match_words(words):
+    ctr = 0
+    lst = []
+    for word in words:
+        if len(word) > 1 and word[0] == word[-1]:
+            ctr += 1
+            lst.append(word)
 
-# User-Defined Function: Multiply Price & Items
-def multiply_items(unit_price, quantity):
-    return unit_price * quantity
+    print("List of words with first and last character same:\n", lst)
+    return ctr
 
-# User-Defined Function: Discount Calculator
-def apply_discount(total_amount, discount_percent):
-    discount = (total_amount * discount_percent) / 100
-    final_amount = total_amount - discount
-    return round(final_amount, 2)
-
-# Calling functions
-price = 15.50
-qty = 4
-subtotal = multiply_items(price, qty)
-final_price = apply_discount(subtotal, 10)
-
-print("Subtotal:", subtotal)
-print("Final Price after 10% discount:", final_price)
+count = match_words(['abc', 'cfc', 'xyz', 'aba', '1221'])
+print("Number of words having first and last character same:", count)

@@ -1,25 +1,19 @@
-# M4L1A3: Return Statements & Conditional Logic
-# Activity 3: Function Return Values and Custom Status Messages
+# M4L1A3: Play with Lists
+# Activity 3: Calculating Sum, Average, Smallest, and Largest Elements in a List
 
-def calculate_change(paid, total):
-    return paid - total
+L = [4, 5, 1, 2, 9, 7, 10, 8]
+print("Original List :", L)
 
-def get_order_feedback(item_count):
-    if item_count >= 10:
-        return "Bulk Order - 15% VIP Discount Applied!"
-    elif item_count >= 5:
-        return "Medium Order - Free Beverage Included!"
-    else:
-        return "Standard Order - Thank you for shopping!"
+count = 0
+for i in L:
+    count += i
 
-amount_paid = 100.0
-total_bill = 67.50
-items = 6
+avg = count / len(L)
 
-change = calculate_change(amount_paid, total_bill)
-feedback = get_order_feedback(items)
+print("sum = ", count)
+print("average = ", avg)
 
-print("Bill Total:", total_bill)
-print("Amount Paid:", amount_paid)
-print("Change Due:", round(change, 2))
-print("Order Status:", feedback)
+L.sort()
+
+print("Smallest element is:", L[0])
+print("Largest element is:", L[-1])

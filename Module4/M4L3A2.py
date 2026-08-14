@@ -1,22 +1,14 @@
-# M4L3A2: Loop Control & Placeholders
-# Activity 2: Demonstrating break, continue, and pass keywords in Python
+# M4L3A2: Check the Frequency
+# Activity 2: Dictionaries - Counting frequency of a specific value in a dictionary
 
-print("--- 1. Continue Example (Skipping Even Numbers) ---")
-for i in range(1, 10):
-    if i % 2 == 0:
-        continue  # Skip even numbers
-    print(f"Odd number: {i}")
+test_dict = {'Codingal': 2, 'is': 2, 'best': 2, 'for': 2, 'Coding': 1}
+print("The original dictionary : " + str(test_dict))
 
-print("\n--- 2. Break Example (Stopping at 5) ---")
-for i in range(1, 10):
-    if i == 5:
-        print("Reached 5! Breaking out of loop.")
-        break  # Exit loop completely
-    print(f"Current count: {i}")
+K = 2
+res = 0
 
-print("\n--- 3. Pass Example (Placeholder) ---")
-for i in range(1, 4):
-    if i == 2:
-        pass  # Placeholder - do nothing
-    else:
-        print(f"Processing item {i}")
+for key in test_dict:
+    if test_dict[key] == K:
+        res = res + 1
+
+print("Frequency of K is : " + str(res))
