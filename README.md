@@ -20,8 +20,21 @@ This repository contains Python programming activities and After Class Projects 
   - `M4L4`: Sets and Arrays (`M4L4A1.py` ... `M4L4ACP.py`)
   - `M4L5`: Advanced Python Functions (`M4L5A1.py` ... `M4L5ACP.py`)
   - `M4L6`: Python Challenges (`M4L6A1.py` ... `M4L6ACP.py`)
+- **Module5/ - Object-Oriented Programming**:
+  - `M5L1`: Object-Oriented Programming (`M5L1A1.py` ... `M5L1ACP.py`)
+  - `M5L2`: More on Object-Oriented Programming (`M5L2A1.py` ... `M5L2ACP.py`)
+  - `M5L3`: Inheritance (`M5L3A1.py` ... `M5L3ACP.py`)
+  - `M5L4`: Encapsulation and Special Functions (`M5L4A1.py` ... `M5L4ACP.py`)
+  - `M5L5`: Abstraction and Polymorphism (`M5L5A1.py` ... `M5L5ACP.py`)
+- **Module6/ - Pygame & Game Development**:
+  - `M6L1`: Let’s Begin with Pygame (`M6L1A1.py` ... `M6L1ACP.py`)
+  - `M6L2`: Basic Game Building Concepts (`M6L2A1.py` ... `M6L2ACP.py`)
+  - `M6L3`: Let’s Add Sprites (`M6L3A1.py` ... `M6L3ACP.py`)
+  - `M6L4`: Let’s Level Up The Game (`M6L4A1.py` ... `M6L4ACP.py`)
+  - `M6L5`: Space Invader Project (`M6L5A1.py`, `M6L5ACP.py`)
 
 ## File Naming Format
 
-- `M<Module>L<Lesson>A<Activity>.py` for classroom activities (e.g., `M3L1A1.py`, `M4L4A1.py`)
-- `M<Module>L<Lesson>ACP.py` for After Class Projects (e.g., `M3L1ACP.py`, `M4L4ACP.py`)
+- `M<Module>L<Lesson>A<Activity>.py` for classroom activities (e.g., `M3L1A1.py`, `M4L4A1.py`, `M6L5A1.py`)
+- `M<Module>L<Lesson>ACP.py` for After Class Projects (e.g., `M3L1ACP.py`, `M4L4ACP.py`, `M6L5ACP.py`)
+
