@@ -35,6 +35,11 @@ Multi-window architecture using `Toplevel`, PIL image display, nested functions 
 - [`M7L5A2.py`](file:///c:/Users/ashka/Desktop/pythonCourseCodingal-main/pythonCourseCodingal-main/Module7/M7L5A2.py): Denomination Calculator (Main window with PIL image banner, confirmation popup, and Toplevel calculating counts for 2000, 500, and 100 notes).
 - [`M7L5ACP.py`](file:///c:/Users/ashka/Desktop/pythonCourseCodingal-main/pythonCourseCodingal-main/Module7/M7L5ACP.py): Reading Schedule Planner (Book reading planner calculating complete days and remaining pages using `//`, `%`, and `try/except`).
 
+### 🍽️ [Lesson 6: Restaurant Management System](file:///c:/Users/ashka/Desktop/pythonCourseCodingal-main/pythonCourseCodingal-main/Module7/)
+Advanced desktop order management using Canvas background images, themed `ttk` widgets, automatic row mapping via `enumerate(start=1)`, live currency conversion via ternary operators, and quantity validation via `.isdigit()`.
+- [`M7L6A1.py`](file:///c:/Users/ashka/Desktop/pythonCourseCodingal-main/pythonCourseCodingal-main/Module7/M7L6A1.py): Restaurant Management System (Complete restaurant order desk with Canvas background, ttk.Combobox currency toggle, live pricing, and validated order summary).
+- [`M7L6ACP.py`](file:///c:/Users/ashka/Desktop/pythonCourseCodingal-main/pythonCourseCodingal-main/Module7/M7L6ACP.py): Stationery Order Management App (Desktop stationery store interface with background graphic, enumerate-driven rows, USD/INR switching, and itemized receipt dialogs).
+
 ---
 
 ## 🔍 In-Depth Technical Concepts
@@ -65,22 +70,38 @@ Multi-window architecture using `Toplevel`, PIL image display, nested functions 
   - Clear editor before loading: `txt_edit.delete(1.0, END)`
   - Retrieve editor contents: `text = txt_edit.get(1.0, END)`
 
-### 4. Multi-Window Systems with `Toplevel`
-- `root = Tk()` creates the single primary window and event loop manager.
-- `top = Toplevel(root)` creates an independent secondary window managed by the system Window Manager.
-- **Parent Assignment:** Widgets destined for the top window must explicitly set parent `top` (e.g. `Label(top, ...)`). Setting `Label(root, ...)` will place the widget on the main window instead!
-- **Nested Functions:** Defining functions inside `topwin()` allows direct variable access (`entry.get()`) without global variables or parameter passing.
+### 4. Canvas Backgrounds & Preventing Garbage Collection
+- Creating a background with `Canvas`:
+  ```python
+  canvas = tk.Canvas(root, width=800, height=600)
+  canvas.pack(fill="both", expand=True)
+  bg = tk.PhotoImage(file="background.png")
+  canvas.create_image(0, 0, anchor=tk.NW, image=bg)
+  canvas.image = bg  # CRITICAL: Keep reference to prevent garbage collection!
+  ```
+- Without `canvas.image = bg`, Python's garbage collector destroys the image object, causing the canvas to display a blank area.
 
-### 5. Denomination Math (`//` and `%`)
-- **Floor Division (`//`)**: Extracts the whole count of notes fitting into the amount:
+### 5. Themed Widgets (`ttk`) & Combobox
+- `from tkinter import ttk` gives access to styled widgets (`ttk.Frame`, `ttk.Label`, `ttk.Entry`, `ttk.Button`, `ttk.Combobox`).
+- `ttk.Combobox` pairs with `tk.StringVar()`:
   ```python
-  note2000 = amount // 2000
+  currency_var = tk.StringVar()
+  dropdown = ttk.Combobox(frame, textvariable=currency_var, values=("USD", "INR"), state="readonly")
+  dropdown.current(0)
+  currency_var.trace("w", callback_func)  # Auto-triggers whenever user changes choice
   ```
-- **Modulo (`%`)**: Leaves only the remainder to be passed to the next denomination:
+
+### 6. Ternary Operator & `.isdigit()` Validation
+- **Ternary Operator:**
   ```python
-  amount %= 2000
+  symbol = "₹" if currency == "INR" else "$"
+  rate = exchange_rate if currency == "INR" else 1
   ```
-- Always process denominations in strictly descending order (`2000 -> 500 -> 100`).
+- **Input Validation with `.isdigit()`:**
+  - `quantity = entry.get()`
+  - `"2".isdigit()` returns `True`
+  - `"abc".isdigit()`, `""`, and `"2.5"` return `False`
+  - Prevents `ValueError` exceptions before invoking `int(quantity)`.
 
 ---
 
@@ -102,3 +123,5 @@ Multi-window architecture using `Toplevel`, PIL image display, nested functions 
 | [`M7L5A1.py`](file:///c:/Users/ashka/Desktop/pythonCourseCodingal-main/pythonCourseCodingal-main/Module7/M7L5A1.py) | L5 Activity 1 | `Toplevel()`, secondary window lifecycle, `.pack()` |
 | [`M7L5A2.py`](file:///c:/Users/ashka/Desktop/pythonCourseCodingal-main/pythonCourseCodingal-main/Module7/M7L5A2.py) | L5 Activity 2 | Denomination Calculator, `PIL`, nested `calculator()`, `//`, `%`, `try/except` |
 | [`M7L5ACP.py`](file:///c:/Users/ashka/Desktop/pythonCourseCodingal-main/pythonCourseCodingal-main/Module7/M7L5ACP.py) | L5 ACP | Reading Schedule Planner, Toplevel, reading days and pages |
+| [`M7L6A1.py`](file:///c:/Users/ashka/Desktop/pythonCourseCodingal-main/pythonCourseCodingal-main/Module7/M7L6A1.py) | L6 Activity 1 | Restaurant Order Management, Canvas, ttk, `enumerate`, ternary, `.isdigit` |
+| [`M7L6ACP.py`](file:///c:/Users/ashka/Desktop/pythonCourseCodingal-main/pythonCourseCodingal-main/Module7/M7L6ACP.py) | L6 ACP | Stationery Order Management, Canvas, ttk.Combobox, receipt summary |
