@@ -36,6 +36,8 @@ This repository contains Python programming activities and After Class Projects 
   - `M7L1`: Widgets for Starters! (`M7L1A1.py`, `M7L1A2.py`, `M7L1ACP.py`)
   - `M7L2`: Tkinter Geometry Managers (`M7L2A1.py`, `M7L2A2.py`, `M7L2ACP.py`)
   - `M7L3`: Where’s the Event? (`M7L3A1.py`, `M7L3A2.py`, `M7L3ACP.py`)
+  - `M7L4`: Let’s Build a Text Editor (`M7L4A1.py`, `M7L4ACP.py`)
+  - `M7L5`: Denomination Calculator (`M7L5A1.py`, `M7L5A2.py`, `M7L5ACP.py`)
 - **Prompt Engineering/ - Generative AI & Game Lab Track**:
   - `Lesson 1`: Meet the World of Prompts (Chatbot exploration & prompt detectives)
   - `Lesson 2`: Clear Prompts, Clear Code (Button Builder & Click-to-Color Circle)

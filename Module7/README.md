@@ -24,6 +24,17 @@ Deep dive into event-driven programming, binding raw keyboard (`<Key>`) and mous
 - [`M7L3A2.py`](file:///c:/Users/ashka/Desktop/pythonCourseCodingal-main/pythonCourseCodingal-main/Module7/M7L3A2.py): Virus Detected (`from tkinter import messagebox`, `messagebox.showwarning()`, and button command wiring).
 - [`M7L3ACP.py`](file:///c:/Users/ashka/Desktop/pythonCourseCodingal-main/pythonCourseCodingal-main/Module7/M7L3ACP.py): After-School Routine Checker (Interactive routine tracker with keypress listener, label click listener, and missing task alert popup).
 
+### 📝 [Lesson 4: Let’s Build a Text Editor](file:///c:/Users/ashka/Desktop/pythonCourseCodingal-main/pythonCourseCodingal-main/Module7/)
+Building a fully-functional desktop text editor with OS file pickers, reading and writing files from disk, dynamic title updates, and resizable grid layouts.
+- [`M7L4A1.py`](file:///c:/Users/ashka/Desktop/pythonCourseCodingal-main/pythonCourseCodingal-main/Module7/M7L4A1.py): My Text Editor (Desktop text editor with `askopenfilename()`, `asksaveasfilename()`, `with open(...)`, `columnconfigure(1, weight=1)`).
+- [`M7L4ACP.py`](file:///c:/Users/ashka/Desktop/pythonCourseCodingal-main/pythonCourseCodingal-main/Module7/M7L4ACP.py): Letter Writing Application (Dedicated application for drafting, opening, editing, and saving letters with live title updates).
+
+### 🪙 [Lesson 5: Denomination Calculator](file:///c:/Users/ashka/Desktop/pythonCourseCodingal-main/pythonCourseCodingal-main/Module7/)
+Multi-window architecture using `Toplevel`, PIL image display, nested functions for direct widget scope access, floor division `//` and modulo `%`, and robust `try/except` validation.
+- [`M7L5A1.py`](file:///c:/Users/ashka/Desktop/pythonCourseCodingal-main/pythonCourseCodingal-main/Module7/M7L5A1.py): Let’s Top a Window (Minimalist two-window application opening a secondary `Toplevel()` window).
+- [`M7L5A2.py`](file:///c:/Users/ashka/Desktop/pythonCourseCodingal-main/pythonCourseCodingal-main/Module7/M7L5A2.py): Denomination Calculator (Main window with PIL image banner, confirmation popup, and Toplevel calculating counts for 2000, 500, and 100 notes).
+- [`M7L5ACP.py`](file:///c:/Users/ashka/Desktop/pythonCourseCodingal-main/pythonCourseCodingal-main/Module7/M7L5ACP.py): Reading Schedule Planner (Book reading planner calculating complete days and remaining pages using `//`, `%`, and `try/except`).
+
 ---
 
 ## 🔍 In-Depth Technical Concepts
@@ -40,29 +51,54 @@ Deep dive into event-driven programming, binding raw keyboard (`<Key>`) and mous
 | **Event Scope** | Universal: Keys, clicks, motion, focus | Click events on that specific button |
 | **Handler Parameters** | **Must accept 1 argument:** `def handler(event):` | **Takes 0 arguments:** `def handler():` |
 | **Wiring Syntax** | `widget.bind("<Key>", handler)` | `Button(..., command=handler)` |
-| **Key Info** | Access typed char via `event.char` | N/A |
+| **Parentheses Trap** | Never add `()`: `handler` not `handler()` | Never add `()`: `command=func` not `func()` |
 
-### 3. Password Masking
-- `Entry(frame, show="*")`: Replaces display characters with `*`.
-- Calling `.get()` on the entry **still returns the real unmasked string**!
+### 3. Native File Dialogs (`tkinter.filedialog`)
+- **Import:** `from tkinter.filedialog import askopenfilename, asksaveasfilename`
+- **Cancellation Safety:** If the user cancels the dialog, the function returns an empty string `""` (falsy). Always guard with:
+  ```python
+  if not filepath:
+      return
+  ```
+- **Text Widget Indexing:**
+  - `1.0` denotes **Line 1, Character 0** (Text lines start at 1, characters start at 0).
+  - Clear editor before loading: `txt_edit.delete(1.0, END)`
+  - Retrieve editor contents: `text = txt_edit.get(1.0, END)`
 
-### 4. Popup Dialogs with `messagebox`
-- Must be explicitly imported: `from tkinter import messagebox`
-- `messagebox.showwarning(title, message)`: Displays warning dialog and pauses execution until user clicks OK.
-- Other variants: `showinfo()`, `showerror()`, `askokcancel()`.
+### 4. Multi-Window Systems with `Toplevel`
+- `root = Tk()` creates the single primary window and event loop manager.
+- `top = Toplevel(root)` creates an independent secondary window managed by the system Window Manager.
+- **Parent Assignment:** Widgets destined for the top window must explicitly set parent `top` (e.g. `Label(top, ...)`). Setting `Label(root, ...)` will place the widget on the main window instead!
+- **Nested Functions:** Defining functions inside `topwin()` allows direct variable access (`entry.get()`) without global variables or parameter passing.
+
+### 5. Denomination Math (`//` and `%`)
+- **Floor Division (`//`)**: Extracts the whole count of notes fitting into the amount:
+  ```python
+  note2000 = amount // 2000
+  ```
+- **Modulo (`%`)**: Leaves only the remainder to be passed to the next denomination:
+  ```python
+  amount %= 2000
+  ```
+- Always process denominations in strictly descending order (`2000 -> 500 -> 100`).
 
 ---
 
 ## 📂 File Summary
 
-| File | Activity / Project | Key Widgets / Concepts |
+| File | Lesson & Type | Key Widgets / Concepts |
 |---|---|---|
-| [`M7L1A1.py`](file:///c:/Users/ashka/Desktop/pythonCourseCodingal-main/pythonCourseCodingal-main/Module7/M7L1A1.py) | Activity 1 | `Tk()`, `title()`, `geometry()`, `mainloop()` |
-| [`M7L1A2.py`](file:///c:/Users/ashka/Desktop/pythonCourseCodingal-main/pythonCourseCodingal-main/Module7/M7L1A2.py) | Activity 2 | `Label`, `Entry`, `Button`, `Text`, `date.today()` |
-| [`M7L1ACP.py`](file:///c:/Users/ashka/Desktop/pythonCourseCodingal-main/pythonCourseCodingal-main/Module7/M7L1ACP.py) | ACP Project | Workshop Desk, `delete(1.0, END)`, `insert(END, ...)` |
-| [`M7L2A1.py`](file:///c:/Users/ashka/Desktop/pythonCourseCodingal-main/pythonCourseCodingal-main/Module7/M7L2A1.py) | Activity 1 | `grid()`, nested loops, `Frame`, `relief=SUNKEN` |
-| [`M7L2A2.py`](file:///c:/Users/ashka/Desktop/pythonCourseCodingal-main/pythonCourseCodingal-main/Module7/M7L2A2.py) | Activity 2 | `place()`, `show="*"`, `Frame(master=root)` |
-| [`M7L2ACP.py`](file:///c:/Users/ashka/Desktop/pythonCourseCodingal-main/pythonCourseCodingal-main/Module7/M7L2ACP.py) | ACP Project | ATM PIN Setup, keypad grid, `show="*"`, `confirm_pin()` |
-| [`M7L3A1.py`](file:///c:/Users/ashka/Desktop/pythonCourseCodingal-main/pythonCourseCodingal-main/Module7/M7L3A1.py) | Activity 1 | `.bind("<Key>")`, `event.char`, `.bind("<Button-1>")` |
-| [`M7L3A2.py`](file:///c:/Users/ashka/Desktop/pythonCourseCodingal-main/pythonCourseCodingal-main/Module7/M7L3A2.py) | Activity 2 | `from tkinter import messagebox`, `showwarning()` |
-| [`M7L3ACP.py`](file:///c:/Users/ashka/Desktop/pythonCourseCodingal-main/pythonCourseCodingal-main/Module7/M7L3ACP.py) | ACP Project | After-School Routine Checker, key/mouse events, alerts |
+| [`M7L1A1.py`](file:///c:/Users/ashka/Desktop/pythonCourseCodingal-main/pythonCourseCodingal-main/Module7/M7L1A1.py) | L1 Activity 1 | `Tk()`, `title()`, `geometry()`, `mainloop()` |
+| [`M7L1A2.py`](file:///c:/Users/ashka/Desktop/pythonCourseCodingal-main/pythonCourseCodingal-main/Module7/M7L1A2.py) | L1 Activity 2 | `Label`, `Entry`, `Button`, `Text`, `date.today()` |
+| [`M7L1ACP.py`](file:///c:/Users/ashka/Desktop/pythonCourseCodingal-main/pythonCourseCodingal-main/Module7/M7L1ACP.py) | L1 ACP | Workshop Desk, `delete(1.0, END)`, `insert(END, ...)` |
+| [`M7L2A1.py`](file:///c:/Users/ashka/Desktop/pythonCourseCodingal-main/pythonCourseCodingal-main/Module7/M7L2A1.py) | L2 Activity 1 | `grid()`, nested loops, `Frame`, `relief=SUNKEN` |
+| [`M7L2A2.py`](file:///c:/Users/ashka/Desktop/pythonCourseCodingal-main/pythonCourseCodingal-main/Module7/M7L2A2.py) | L2 Activity 2 | `place()`, `show="*"`, `Frame(master=root)` |
+| [`M7L2ACP.py`](file:///c:/Users/ashka/Desktop/pythonCourseCodingal-main/pythonCourseCodingal-main/Module7/M7L2ACP.py) | L2 ACP | ATM PIN Setup, keypad grid, `show="*"`, `confirm_pin()` |
+| [`M7L3A1.py`](file:///c:/Users/ashka/Desktop/pythonCourseCodingal-main/pythonCourseCodingal-main/Module7/M7L3A1.py) | L3 Activity 1 | `.bind("<Key>")`, `event.char`, `.bind("<Button-1>")` |
+| [`M7L3A2.py`](file:///c:/Users/ashka/Desktop/pythonCourseCodingal-main/pythonCourseCodingal-main/Module7/M7L3A2.py) | L3 Activity 2 | `from tkinter import messagebox`, `showwarning()` |
+| [`M7L3ACP.py`](file:///c:/Users/ashka/Desktop/pythonCourseCodingal-main/pythonCourseCodingal-main/Module7/M7L3ACP.py) | L3 ACP | After-School Routine Checker, key/mouse events, alerts |
+| [`M7L4A1.py`](file:///c:/Users/ashka/Desktop/pythonCourseCodingal-main/pythonCourseCodingal-main/Module7/M7L4A1.py) | L4 Activity 1 | `askopenfilename`, `asksaveasfilename`, `with open`, `grid()` |
+| [`M7L4ACP.py`](file:///c:/Users/ashka/Desktop/pythonCourseCodingal-main/pythonCourseCodingal-main/Module7/M7L4ACP.py) | L4 ACP | Letter Writing App, text file editing, dynamic title |
+| [`M7L5A1.py`](file:///c:/Users/ashka/Desktop/pythonCourseCodingal-main/pythonCourseCodingal-main/Module7/M7L5A1.py) | L5 Activity 1 | `Toplevel()`, secondary window lifecycle, `.pack()` |
+| [`M7L5A2.py`](file:///c:/Users/ashka/Desktop/pythonCourseCodingal-main/pythonCourseCodingal-main/Module7/M7L5A2.py) | L5 Activity 2 | Denomination Calculator, `PIL`, nested `calculator()`, `//`, `%`, `try/except` |
+| [`M7L5ACP.py`](file:///c:/Users/ashka/Desktop/pythonCourseCodingal-main/pythonCourseCodingal-main/Module7/M7L5ACP.py) | L5 ACP | Reading Schedule Planner, Toplevel, reading days and pages |
