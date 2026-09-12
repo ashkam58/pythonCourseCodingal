@@ -32,9 +32,18 @@ This repository contains Python programming activities and After Class Projects 
   - `M6L3`: Let’s Add Sprites (`M6L3A1.py` ... `M6L3ACP.py`)
   - `M6L4`: Let’s Level Up The Game (`M6L4A1.py` ... `M6L4ACP.py`)
   - `M6L5`: Space Invader Project (`M6L5A1.py`, `M6L5ACP.py`)
+- **Prompt Engineering/ - Generative AI & Game Lab Track**:
+  - `Lesson 1`: Meet the World of Prompts (Chatbot exploration & prompt detectives)
+  - `Lesson 2`: Clear Prompts, Clear Code (Button Builder & Click-to-Color Circle)
+  - `Lesson 3`: Animations with Prompts (Rocket Builder, Penguin Jumper, Cat Chaser, Bouncing Ball)
+  - `Lesson 4`: Storytelling with Prompts (Space Rescue Story with branching riddles & Sea Rescue Adventure)
+  - `Lesson 5`: Game Building with Prompts (Star Catcher with HUD & Fruit Basket Dash)
+  - `Lesson 6`: Prompt-to-Project Showcase (Capstone: Choose Your Own Game & Choice Board)
 
 ## File Naming Format
 
 - `M<Module>L<Lesson>A<Activity>.py` for classroom activities (e.g., `M3L1A1.py`, `M4L4A1.py`, `M6L5A1.py`)
 - `M<Module>L<Lesson>ACP.py` for After Class Projects (e.g., `M3L1ACP.py`, `M4L4ACP.py`, `M6L5ACP.py`)
+
+
 
