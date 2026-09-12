@@ -32,6 +32,8 @@ This repository contains Python programming activities and After Class Projects 
   - `M6L3`: Let’s Add Sprites (`M6L3A1.py` ... `M6L3ACP.py`)
   - `M6L4`: Let’s Level Up The Game (`M6L4A1.py` ... `M6L4ACP.py`)
   - `M6L5`: Space Invader Project (`M6L5A1.py`, `M6L5ACP.py`)
+- **Module7/ - GUI Development with Tkinter**:
+  - `M7L1`: Widgets for Starters! (`M7L1A1.py`, `M7L1A2.py`, `M7L1ACP.py`)
 - **Prompt Engineering/ - Generative AI & Game Lab Track**:
   - `Lesson 1`: Meet the World of Prompts (Chatbot exploration & prompt detectives)
   - `Lesson 2`: Clear Prompts, Clear Code (Button Builder & Click-to-Color Circle)
