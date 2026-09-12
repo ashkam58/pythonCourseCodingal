@@ -1,109 +1,68 @@
 # Module 7: GUI Development with Tkinter
-## Lesson 1: Widgets for Starters!
 
-Welcome to **Module 7: GUI Development with Tkinter**! In this lesson, students transition from plain text console programs to real Graphical User Interfaces (GUIs). Students learn how to create desktop windows, arrange core widgets (**Label**, **Entry**, **Text**, **Button**), and manage the event loop with `mainloop()`.
-
----
-
-## 📚 Overview & List of Topics
-
-1. **What Is Tkinter and Importing It** (`from tkinter import *`)
-2. **Creating a Window and Starting the Event Loop** (`Tk()`, `title()`, `geometry()`, `mainloop()`)
-3. **Displaying Text with a Label Widget** (`Label()`, `pack()`, `fg`, `bg`)
-4. **Getting Typed Input with an Entry Widget and `.get()`**
-5. **Displaying Multi-Line Output with a Text Widget and `.insert()`**
-6. **Connecting a Button's `command` to a Function** (`command=display` without parentheses)
-7. **Activities & After Class Project (ACP)**
+Welcome to **Module 7: GUI Development with Tkinter**! This module covers building complete, interactive graphical desktop applications in Python using Tkinter.
 
 ---
 
-## 🔍 Topics in Detail
+## 📚 Lessons Overview
 
-### 1. What Is Tkinter and Importing It
-- **What it is:** Tkinter is Python's built-in GUI library. It ships with Python automatically, requiring no external `pip install`.
-- **How it works:**
-  ```python
-  from tkinter import *
-  ```
-  This imports `Tk`, `Label`, `Button`, `Entry`, and `Text` directly into namespace without needing a `tkinter.` prefix.
+### 🌟 [Lesson 1: Widgets for Starters!](file:///c:/Users/ashka/Desktop/pythonCourseCodingal-main/pythonCourseCodingal-main/Module7/)
+Introduces Tkinter window creation, the event loop (`mainloop()`), and core widgets (`Label`, `Entry`, `Text`, `Button`).
+- [`M7L1A1.py`](file:///c:/Users/ashka/Desktop/pythonCourseCodingal-main/pythonCourseCodingal-main/Module7/M7L1A1.py): Basic Tkinter window (`Tk()`, `title()`, `geometry()`, `mainloop()`).
+- [`M7L1A2.py`](file:///c:/Users/ashka/Desktop/pythonCourseCodingal-main/pythonCourseCodingal-main/Module7/M7L1A2.py): Getting started with widgets (Name entry, date output, button command).
+- [`M7L1ACP.py`](file:///c:/Users/ashka/Desktop/pythonCourseCodingal-main/pythonCourseCodingal-main/Module7/M7L1ACP.py): Workshop Participant Greeting (Digital welcome desk with `delete(1.0, END)`).
 
-### 2. Creating a Window and Starting the Event Loop
-- **What it is:** Every GUI app requires one primary top-level window. `mainloop()` keeps the window responsive, listening for clicks and keystrokes.
-- **How it works:**
-  ```python
-  window = Tk()
-  window.title('Demo Window')
-  window.geometry('400x300')  # Width x Height in pixels
-  window.mainloop()            # MUST BE THE LAST LINE
-  ```
+### 📐 [Lesson 2: Tkinter Geometry Managers](file:///c:/Users/ashka/Desktop/pythonCourseCodingal-main/pythonCourseCodingal-main/Module7/)
+Mastering widget layout and grouping using `Frame`, `relief` borders, `grid()`, `place()`, and password masking with `show="*"`.
+- [`M7L2A1.py`](file:///c:/Users/ashka/Desktop/pythonCourseCodingal-main/pythonCourseCodingal-main/Module7/M7L2A1.py): Number Pad (4x3 keypad matrix using nested loops, `Frame`, `relief=SUNKEN`, and `grid()`).
+- [`M7L2A2.py`](file:///c:/Users/ashka/Desktop/pythonCourseCodingal-main/pythonCourseCodingal-main/Module7/M7L2A2.py): Login App (Registration form with `place()`, password masking with `show="*"`, and personalized text box response).
+- [`M7L2ACP.py`](file:///c:/Users/ashka/Desktop/pythonCourseCodingal-main/pythonCourseCodingal-main/Module7/M7L2ACP.py): ATM PIN Setup Interface (Combines detail frames, SUNKEN outer keypad, RAISED cells, validation, and `place()` layout).
 
-### 3. Displaying Text with a Label Widget
-- **What it is:** A non-interactive widget purely for showing headers, prompts, or status text.
-- **How it works:**
-  ```python
-  lbl = Label(text="Hey There!", fg="white", bg="#072F5F", height=1, width=300)
-  lbl.pack()  # Must call pack() or widget remains invisible!
-  ```
-
-### 4. Getting Typed Input with an Entry Widget and `.get()`
-- **What it is:** A single-line text input field.
-- **How it works:**
-  ```python
-  name_entry = Entry()
-  name_entry.pack()
-  # Inside button callback function:
-  user_name = name_entry.get()
-  ```
-
-### 5. Displaying Multi-Line Output with a Text Widget and `.insert()`
-- **What it is:** A multi-line output container capable of displaying paragraphs, logs, or stacked messages.
-- **How it works:**
-  ```python
-  text_box = Text(height=3)
-  text_box.pack()
-  # Inside button callback:
-  text_box.delete(1.0, END)      # Clear existing content
-  text_box.insert(END, "Hello!\n") # Append new content at END
-  ```
-
-### 6. Connecting a Button's `command` to a Function
-- **What it is:** A clickable button widget wired to execute a custom Python function.
-- **Critical Rule:** Write `command=display` **without parentheses**. Passing `command=display()` invokes the function at program startup instead of upon user click.
-  ```python
-  btn = Button(text="Begin", command=display, bg="#1261A0", fg="white")
-  btn.pack()
-  ```
+### ⚡ [Lesson 3: Where’s the Event?](file:///c:/Users/ashka/Desktop/pythonCourseCodingal-main/pythonCourseCodingal-main/Module7/)
+Deep dive into event-driven programming, binding raw keyboard (`<Key>`) and mouse click (`<Button-1>`) events, and displaying dialog alerts with `messagebox`.
+- [`M7L3A1.py`](file:///c:/Users/ashka/Desktop/pythonCourseCodingal-main/pythonCourseCodingal-main/Module7/M7L3A1.py): Event Handler (Binding `<Key>` to print `event.char` and `<Button-1>` to print click events).
+- [`M7L3A2.py`](file:///c:/Users/ashka/Desktop/pythonCourseCodingal-main/pythonCourseCodingal-main/Module7/M7L3A2.py): Virus Detected (`from tkinter import messagebox`, `messagebox.showwarning()`, and button command wiring).
+- [`M7L3ACP.py`](file:///c:/Users/ashka/Desktop/pythonCourseCodingal-main/pythonCourseCodingal-main/Module7/M7L3ACP.py): After-School Routine Checker (Interactive routine tracker with keypress listener, label click listener, and missing task alert popup).
 
 ---
 
-## 📂 Lesson Activities & Files
+## 🔍 In-Depth Technical Concepts
 
-| File | Type | Description |
+### 1. Geometry Managers Comparison
+- **`pack()`**: Stacks widgets vertically or horizontally. Ideal for simple toolbars or top-to-bottom forms.
+- **`grid(row=i, column=j)`**: Places widgets in an invisible 2D spreadsheet matrix. Requires `columnconfigure()` and `rowconfigure()` to scale smoothly.
+- **`place(x=..., y=...)`**: Pins widgets at exact pixel coordinates relative to parent container. Ideal for fixed-dimension dialogs and forms.
+- ⚠️ *Rule of Thumb:* Never mix `grid()` and `pack()` inside the exact same container, as it causes geometry manager deadlocks.
+
+### 2. Event Binding vs. Button Commands
+| Feature | `.bind("<Event>", handler)` | `Button(command=handler)` |
 |---|---|---|
-| [`M7L1A1.py`](file:///c:/Users/ashka/Desktop/pythonCourseCodingal-main/pythonCourseCodingal-main/Module7/M7L1A1.py) | Activity 1 | Bare Tkinter GUI window setting title, geometry (400x300), and starting `mainloop()`. |
-| [`M7L1A2.py`](file:///c:/Users/ashka/Desktop/pythonCourseCodingal-main/pythonCourseCodingal-main/Module7/M7L1A2.py) | Activity 2 | Getting started with widgets: Heading Label, Name Entry, Begin Button, and Text box output with current date. |
-| [`M7L1ACP.py`](file:///c:/Users/ashka/Desktop/pythonCourseCodingal-main/pythonCourseCodingal-main/Module7/M7L1ACP.py) | After Class Project | Workshop Participant Greeting: Complete digital check-in desk with `delete(1.0, END)` clearing and multi-line formatting. |
+| **Event Scope** | Universal: Keys, clicks, motion, focus | Click events on that specific button |
+| **Handler Parameters** | **Must accept 1 argument:** `def handler(event):` | **Takes 0 arguments:** `def handler():` |
+| **Wiring Syntax** | `widget.bind("<Key>", handler)` | `Button(..., command=handler)` |
+| **Key Info** | Access typed char via `event.char` | N/A |
+
+### 3. Password Masking
+- `Entry(frame, show="*")`: Replaces display characters with `*`.
+- Calling `.get()` on the entry **still returns the real unmasked string**!
+
+### 4. Popup Dialogs with `messagebox`
+- Must be explicitly imported: `from tkinter import messagebox`
+- `messagebox.showwarning(title, message)`: Displays warning dialog and pauses execution until user clicks OK.
+- Other variants: `showinfo()`, `showerror()`, `askokcancel()`.
 
 ---
 
-## ⚠️ Common Beginner Traps & Solutions
+## 📂 File Summary
 
-1. **Window flashes and closes instantly:**
-   - *Cause:* Missing `mainloop()` at the end of the script.
-2. **Widget created but does not appear on screen:**
-   - *Cause:* Forgot to call `.pack()` on the widget.
-3. **Button triggers immediately when the script launches:**
-   - *Cause:* Wrote `command=function()` with parentheses. Remove the `()`!
-4. **`TypeError: insert() argument must be str`:**
-   - *Cause:* Inserting `date.today()` directly into `text_box`. Always cast to string: `str(date.today())`.
-5. **Repeated button clicks stack messages infinitely:**
-   - *Cause:* Forgetting to clear the Text widget. Add `text_box.delete(1.0, END)` before inserting.
-
----
-
-## 🎯 Learning Outcomes
-- Successfully created and sized GUI desktop windows using `Tk()`, `title()`, and `geometry()`.
-- Displayed styled typography using `Label` with custom `fg` and `bg` hex colors.
-- Collected user input with `Entry` and read it using `.get()`.
-- Displayed dynamic multi-line results in a `Text` widget using `.insert(END, ...)`.
-- Wired user click events to Python logic using `Button(command=...)`.
+| File | Activity / Project | Key Widgets / Concepts |
+|---|---|---|
+| [`M7L1A1.py`](file:///c:/Users/ashka/Desktop/pythonCourseCodingal-main/pythonCourseCodingal-main/Module7/M7L1A1.py) | Activity 1 | `Tk()`, `title()`, `geometry()`, `mainloop()` |
+| [`M7L1A2.py`](file:///c:/Users/ashka/Desktop/pythonCourseCodingal-main/pythonCourseCodingal-main/Module7/M7L1A2.py) | Activity 2 | `Label`, `Entry`, `Button`, `Text`, `date.today()` |
+| [`M7L1ACP.py`](file:///c:/Users/ashka/Desktop/pythonCourseCodingal-main/pythonCourseCodingal-main/Module7/M7L1ACP.py) | ACP Project | Workshop Desk, `delete(1.0, END)`, `insert(END, ...)` |
+| [`M7L2A1.py`](file:///c:/Users/ashka/Desktop/pythonCourseCodingal-main/pythonCourseCodingal-main/Module7/M7L2A1.py) | Activity 1 | `grid()`, nested loops, `Frame`, `relief=SUNKEN` |
+| [`M7L2A2.py`](file:///c:/Users/ashka/Desktop/pythonCourseCodingal-main/pythonCourseCodingal-main/Module7/M7L2A2.py) | Activity 2 | `place()`, `show="*"`, `Frame(master=root)` |
+| [`M7L2ACP.py`](file:///c:/Users/ashka/Desktop/pythonCourseCodingal-main/pythonCourseCodingal-main/Module7/M7L2ACP.py) | ACP Project | ATM PIN Setup, keypad grid, `show="*"`, `confirm_pin()` |
+| [`M7L3A1.py`](file:///c:/Users/ashka/Desktop/pythonCourseCodingal-main/pythonCourseCodingal-main/Module7/M7L3A1.py) | Activity 1 | `.bind("<Key>")`, `event.char`, `.bind("<Button-1>")` |
+| [`M7L3A2.py`](file:///c:/Users/ashka/Desktop/pythonCourseCodingal-main/pythonCourseCodingal-main/Module7/M7L3A2.py) | Activity 2 | `from tkinter import messagebox`, `showwarning()` |
+| [`M7L3ACP.py`](file:///c:/Users/ashka/Desktop/pythonCourseCodingal-main/pythonCourseCodingal-main/Module7/M7L3ACP.py) | ACP Project | After-School Routine Checker, key/mouse events, alerts |
