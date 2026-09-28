@@ -47,10 +47,21 @@ This repository contains Python programming activities and After Class Projects 
   - `Lesson 5`: Game Building with Prompts (Star Catcher with HUD & Fruit Basket Dash)
   - `Lesson 6`: Prompt-to-Project Showcase (Capstone: Choose Your Own Game & Choice Board)
 
+- **Coding_Grandmaster_9-12_Module7/ - AI & Coding Grandmaster (Grades 9-12) Module 7**:
+  - `M7L1`: Introduction to Python (`M7L1A1.py`, `M7L1A2.py`, `M7L1ACP.py`, `M7L1ACP_Flowchart.md`)
+  - `M7L2`: Operators and Data Types (`M7L2A1.py`, `M7L2ACP.py`)
+  - `M7L3`: Conditional Statements and Date Time Module (`M7L3A1.py`, `M7L3ACP.py`)
+  - `M7L4`: Loops (`M7L4A1.py`, `M7L4A2.py`, `M7L4A3.py`, `M7L4A4.py`, `M7L4ACP.py`)
+  - `M7L5`: Functions (`M7L5A1.py`, `M7L5A2.py`, `M7L5A3.py`, `M7L5ACP.py`)
+  - `M7L6`: Introduction to Turtle (`M7L6A1.py`, `M7L6ACP.py`)
+
 ## File Naming Format
 
-- `M<Module>L<Lesson>A<Activity>.py` for classroom activities (e.g., `M3L1A1.py`, `M4L4A1.py`, `M6L5A1.py`)
-- `M<Module>L<Lesson>ACP.py` for After Class Projects (e.g., `M3L1ACP.py`, `M4L4ACP.py`, `M6L5ACP.py`)
+- `M<Module>L<Lesson>A<Activity>.py` for classroom activities (e.g., `M7L1A1.py`, `M7L4A1.py`, `M7L5A3.py`)
+- `M<Module>L<Lesson>ACP.py` for After Class Projects (e.g., `M7L1ACP.py`, `M7L2ACP.py`, `M7L4ACP.py`)
+
+For direct submission links and comprehensive quiz answers, see [SUBMISSION_LINKS_AND_QUIZ_GUIDE.md](SUBMISSION_LINKS_AND_QUIZ_GUIDE.md).
+
 
 
 
