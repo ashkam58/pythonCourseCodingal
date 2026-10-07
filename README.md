@@ -54,11 +54,18 @@ This repository contains Python programming activities and After Class Projects 
   - `M7L4`: Loops (`M7L4A1.py`, `M7L4A2.py`, `M7L4A3.py`, `M7L4A4.py`, `M7L4ACP.py`)
   - `M7L5`: Functions (`M7L5A1.py`, `M7L5A2.py`, `M7L5A3.py`, `M7L5ACP.py`)
   - `M7L6`: Introduction to Turtle (`M7L6A1.py`, `M7L6ACP.py`)
+- **Coding_Grandmaster_9-12_Module8/ - AI & Coding Grandmaster (Grades 9-12) Module 8 (Advance Python)**:
+  - `M8L1`: Data Structures in Python – 1 (`M8L1A1.py`, `M8L1A2.py`, `M8L1A3.py`, `M8L1ACP.py`)
+  - `M8L2`: Data Structures in Python – 2 (`M8L2A1.py`, `M8L2A2.py`, `M8L2A3.py`, `M8L2A4.py`, `M8L2ACP.py`)
+  - `M8L3`: Object Oriented Programming – 1 (`M8L3A1.py`, `M8L3A2.py`, `M8L3A3.py`, `M8L3A4.py`, `M8L3ACP.py`)
+  - `M8L4`: Object Oriented Programming – 2 (`M8L4A1.py`, `M8L4A2.py`, `M8L4ACP.py`)
+  - `M8L5`: Inheritance and Abstraction (`M8L5A1.py`, `M8L5A2.py`, `M8L5A3.py`, `M8L5ACP.py`)
+  - `M8L6`: Polymorphism and Encapsulation (`M8L6A1.py`, `M8L6A2.py`, `M8L6ACP.py`)
 
 ## File Naming Format
 
-- `M<Module>L<Lesson>A<Activity>.py` for classroom activities (e.g., `M7L1A1.py`, `M7L4A1.py`, `M7L5A3.py`)
-- `M<Module>L<Lesson>ACP.py` for After Class Projects (e.g., `M7L1ACP.py`, `M7L2ACP.py`, `M7L4ACP.py`)
+- `M<Module>L<Lesson>A<Activity>.py` for classroom activities (e.g., `M8L1A1.py`, `M8L3A1.py`, `M8L5A1.py`)
+- `M<Module>L<Lesson>ACP.py` for After Class Projects (e.g., `M8L1ACP.py`, `M8L2ACP.py`, `M8L6ACP.py`)
 
 For direct submission links and comprehensive quiz answers, see [SUBMISSION_LINKS_AND_QUIZ_GUIDE.md](SUBMISSION_LINKS_AND_QUIZ_GUIDE.md).
 

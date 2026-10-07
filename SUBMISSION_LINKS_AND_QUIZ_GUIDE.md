@@ -238,3 +238,44 @@
    - Coloring: `color("color")`, `begin_fill()`, `end_fill()`.
    - Prevent window exit: `turtle.done()`.
 
+
+
+---
+
+# 🚀 Track 4: AI & Coding Grandmaster Course (Grades 9-12) — Module 8: Advance Python
+
+### 📝 Activity Submission Links
+
+| Lesson | Activity | Topic | File Name | Direct GitHub Link |
+|---|---|---|---|---|
+| **Lesson 1** | Activity 1 | Operations on List | `M8L1A1.py` | [View M8L1A1.py](https://github.com/ashkam58/pythonCourseCodingal/blob/main/Coding_Grandmaster_9-12_Module8/M8L1A1.py) |
+| **Lesson 1** | Activity 2 | Operations on Dictionary | `M8L1A2.py` | [View M8L1A2.py](https://github.com/ashkam58/pythonCourseCodingal/blob/main/Coding_Grandmaster_9-12_Module8/M8L1A2.py) |
+| **Lesson 1** | Activity 3 | List to Dictionary | `M8L1A3.py` | [View M8L1A3.py](https://github.com/ashkam58/pythonCourseCodingal/blob/main/Coding_Grandmaster_9-12_Module8/M8L1A3.py) |
+| **Lesson 2** | Activity 1 | Operations on Tuple | `M8L2A1.py` | [View M8L2A1.py](https://github.com/ashkam58/pythonCourseCodingal/blob/main/Coding_Grandmaster_9-12_Module8/M8L2A1.py) |
+| **Lesson 2** | Activity 2 | Operations on Set | `M8L2A2.py` | [View M8L2A2.py](https://github.com/ashkam58/pythonCourseCodingal/blob/main/Coding_Grandmaster_9-12_Module8/M8L2A2.py) |
+| **Lesson 2** | Activity 3 | Set Union | `M8L2A3.py` | [View M8L2A3.py](https://github.com/ashkam58/pythonCourseCodingal/blob/main/Coding_Grandmaster_9-12_Module8/M8L2A3.py) |
+| **Lesson 2** | Activity 4 | Set Intersection | `M8L2A4.py` | [View M8L2A4.py](https://github.com/ashkam58/pythonCourseCodingal/blob/main/Coding_Grandmaster_9-12_Module8/M8L2A4.py) |
+| **Lesson 3** | Activity 1 | Class Student | `M8L3A1.py` | [View M8L3A1.py](https://github.com/ashkam58/pythonCourseCodingal/blob/main/Coding_Grandmaster_9-12_Module8/M8L3A1.py) |
+| **Lesson 3** | Activity 2 | Class Student- II | `M8L3A2.py` | [View M8L3A2.py](https://github.com/ashkam58/pythonCourseCodingal/blob/main/Coding_Grandmaster_9-12_Module8/M8L3A2.py) |
+| **Lesson 3** | Activity 3 | Parrot Bird | `M8L3A3.py` | [View M8L3A3.py](https://github.com/ashkam58/pythonCourseCodingal/blob/main/Coding_Grandmaster_9-12_Module8/M8L3A3.py) |
+| **Lesson 3** | Activity 4 | Parrot Bird - II | `M8L3A4.py` | [View M8L3A4.py](https://github.com/ashkam58/pythonCourseCodingal/blob/main/Coding_Grandmaster_9-12_Module8/M8L3A4.py) |
+| **Lesson 4** | Activity 1 | Constructor and Destructor | `M8L4A1.py` | [View M8L4A1.py](https://github.com/ashkam58/pythonCourseCodingal/blob/main/Coding_Grandmaster_9-12_Module8/M8L4A1.py) |
+| **Lesson 4** | Activity 2 | Library Management System | `M8L4A2.py` | [View M8L4A2.py](https://github.com/ashkam58/pythonCourseCodingal/blob/main/Coding_Grandmaster_9-12_Module8/M8L4A2.py) |
+| **Lesson 5** | Activity 1 | Employee Details | `M8L5A1.py` | [View M8L5A1.py](https://github.com/ashkam58/pythonCourseCodingal/blob/main/Coding_Grandmaster_9-12_Module8/M8L5A1.py) |
+| **Lesson 5** | Activity 2 | Student Details | `M8L5A2.py` | [View M8L5A2.py](https://github.com/ashkam58/pythonCourseCodingal/blob/main/Coding_Grandmaster_9-12_Module8/M8L5A2.py) |
+| **Lesson 5** | Activity 3 | Animal Class | `M8L5A3.py` | [View M8L5A3.py](https://github.com/ashkam58/pythonCourseCodingal/blob/main/Coding_Grandmaster_9-12_Module8/M8L5A3.py) |
+| **Lesson 6** | Activity 1 | Polymorphism Implementation | `M8L6A1.py` | [View M8L6A1.py](https://github.com/ashkam58/pythonCourseCodingal/blob/main/Coding_Grandmaster_9-12_Module8/M8L6A1.py) |
+| **Lesson 6** | Activity 2 | Encapsulation Implementation | `M8L6A2.py` | [View M8L6A2.py](https://github.com/ashkam58/pythonCourseCodingal/blob/main/Coding_Grandmaster_9-12_Module8/M8L6A2.py) |
+
+---
+
+### 🚀 ACP Submission Links
+
+| Lesson | Topic | File / Project | File Name | Direct GitHub Link |
+|---|---|---|---|---|
+| **Lesson 1** | Data Structures in Python – 1 | Number Guessing Game | `M8L1ACP.py` | [View M8L1ACP.py](https://github.com/ashkam58/pythonCourseCodingal/blob/main/Coding_Grandmaster_9-12_Module8/M8L1ACP.py) |
+| **Lesson 2** | Data Structures in Python – 2 | Tuple to List | `M8L2ACP.py` | [View M8L2ACP.py](https://github.com/ashkam58/pythonCourseCodingal/blob/main/Coding_Grandmaster_9-12_Module8/M8L2ACP.py) |
+| **Lesson 3** | Object Oriented Programming – 1 | Robot Introduction | `M8L3ACP.py` | [View M8L3ACP.py](https://github.com/ashkam58/pythonCourseCodingal/blob/main/Coding_Grandmaster_9-12_Module8/M8L3ACP.py) |
+| **Lesson 4** | Object Oriented Programming – 2 | Expression Class | `M8L4ACP.py` | [View M8L4ACP.py](https://github.com/ashkam58/pythonCourseCodingal/blob/main/Coding_Grandmaster_9-12_Module8/M8L4ACP.py) |
+| **Lesson 5** | Inheritance and Abstraction | Polygon Area Calculator | `M8L5ACP.py` | [View M8L5ACP.py](https://github.com/ashkam58/pythonCourseCodingal/blob/main/Coding_Grandmaster_9-12_Module8/M8L5ACP.py) |
+| **Lesson 6** | Polymorphism and Encapsulation | Polygon Area Calculator & Shape Hierarchy | `M8L6ACP.py` | [View M8L6ACP.py](https://github.com/ashkam58/pythonCourseCodingal/blob/main/Coding_Grandmaster_9-12_Module8/M8L6ACP.py) |
